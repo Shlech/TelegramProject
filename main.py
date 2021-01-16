@@ -74,4 +74,4 @@ def process_answer(user, answer):
 
     process_state(user, states[user])
 
-bot.polling(none_stop=True)
+bot.polling()
