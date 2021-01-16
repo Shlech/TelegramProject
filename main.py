@@ -1,7 +1,7 @@
 from telebot import TeleBot, types
 from random import randint
 
-pictures = {
+images = {
     0: "https://lh3.googleusercontent.com/proxy/tW2zNiX78Ss2v7YFmKY7bnW74JLOqFpqIUxzHLhKd1OByJupV8y_VtnkIOdLU-Yg2-2s-Stk0KUc1kDAVRE4jak5zlwFznQJIZ_ZJ43N6u6XEgFOFP-5inx61JRuFCUlGT_zhrvUu2oNY2E7qq84ljpi9Qg",
     1: "https://sun9-17.userapi.com/c849124/v849124993/2c610/vm_-aPrlZjU.jpg",
     2: "https://i.pinimg.com/originals/b6/0b/21/b60b2130ee8751b809b0427267c9e4a2.jpg",
@@ -29,7 +29,7 @@ def user_answer(call):
 def process_state(user, state):
     kb = types.InlineKeyboardMarkup()
 
-    bot.send_photo(user, pictures[state])
+    bot.send_photo(user, images[state])
 
     if state == 0:
         kb.add(types.InlineKeyboardButton(text="Достать фонарь", callback_data="1"))
